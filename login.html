@@ -1,0 +1,222 @@
+﻿<!doctype html>
+<html lang="zxx">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Axoma">
+    <meta name="keywords" content="Axoma">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>HRD Network</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link href="static\plugin\bootstrap\css\bootstrap.min.css" rel="stylesheet">
+    <link href="static\plugin\font-awesome\css\fontawesome-all.min.css" rel="stylesheet">
+    <link href="static\plugin\et-line\style.css" rel="stylesheet">
+    <link href="static\plugin\themify-icons\themify-icons.css" rel="stylesheet">
+    <link href="static\plugin\owl-carousel\css\owl.carousel.min.css" rel="stylesheet">
+    <link href="static\plugin\magnific\magnific-popup.css" rel="stylesheet">
+    <link href="static\css\style.css" rel="stylesheet">
+    <link href="static\css\color\default.css" rel="stylesheet" id="color_theme">
+  </head>
+
+  <body data-spy="scroll" data-target="#navbar" data-offset="98">
+    $(if chap-id)
+  <form name="sendin" action="$(link-login-only)" method="post">
+    <input type="hidden" name="username" />
+  </form>
+  
+  <script type="text/javascript">
+      function doLogin() {
+    document.sendin.username.value = document.login.username.value;
+    document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+    document.sendin.submit();
+    return false;
+      }
+  </script>
+$(endif)
+<!--     $(if chap-id)
+    <form name="sendin" action="$(link-login-only)" method="post">
+      <input type="hidden" name="username" />
+      <input type="hidden" name="password" />
+      <input type="hidden" name="dst" value="$(link-orig)" />
+      <input type="hidden" name="popup" value="true" />
+    </form>
+    <script type="text/javascript" src="/md5.js"></script>
+    <script type="text/javascript">
+  
+        function doLogin() {
+      document.sendin.username.value = document.login.username.value;
+      document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+      document.sendin.submit();
+      return false;
+        }
+    
+    </script>
+    $(endif)
+ -->
+
+    <div id="loading">
+      <div class="load-circle"><span class="one"></span></div>
+    </div>
+    <header>
+      <nav class="navbar header-nav navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img class="light-logo" title="" alt="">
+            <img class="dark-logo" title="HRD Network" alt="">
+          </a>
+        </div>
+      </nav> 
+    </header>
+    <main>
+      <section id="home" class="home-banner-03 theme-bg bg-effect-box">
+        <div class="bg-effect bg-cover" style="background-image: url(static/img/banner-effect-6.svg);"></div>
+        <div id="particles_effect" class="particles-effect"></div>
+        <div class="container">
+          <div class="row align-items-center justify-content-center p-100px-tb sm-p-60px-b">
+            <div class="col-lg-5 md-p-30px-tb">
+              <h5 class="white-color">HRD Network</h5>
+               <div class="row justify-content-center text-center my-2">
+               <div id="member" class="col-6"><button type="button" class="btn btn-secondary btn-block rounded-right"></i>MEMBER</button></div>
+               <div id="voucher" class="col-6"><button type="button" class="btn btn-info btn-block">VOUCHER</button></div>
+             </div>
+              <h1 class="font-alt white-color">Login Hotspot</h1>
+              <p class="white-color-light">Login Hotspot</p>
+            <form id="form-member" name="" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+        <div class="form-row">
+          <input type="hidden" name="dst" value="$(link-orig)" />
+          <input type="hidden" name="popup" value="true" />
+              <div class="subscribe-block">
+                  <div class="card-block py-lg px-md">
+                    <form id="loginForm" class="md-form form-light" role="form" action="$(link-login-only)" method="post">
+                        <input type="hidden" name="dst" value="$(link-orig)"/>
+                        <input type="hidden" name="popup" value="true"/>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="inputUser" class="form-label">Username</label>
+                            <div class="md-form-line-wrap">
+                              <input id="inputUser" type="text" name="username" placeholder="Username" class="form-control" autofocus required>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="inputPassword" class="form-label">Password</label>
+                            <div class="md-form-line-wrap">
+                              <input id="inputPassword" type="password" name="password" placeholder="Password" class="form-control" required>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            $(if error)
+                              <p><font style="color: #ffffffe8">Terjadi kesalahan: </font>$(error)</p>
+                            $(endif)
+                          </div>
+                        </div></br>
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-block btn-light"><span class="btn-elem-wrap"><span class="text" style="color: darkblue">LOGIN</span></span></button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                <label>Powered by HRD Network</label>
+              </div>
+            </div>
+              </div>
+            </div> 
+<!--             <div class="col-lg-7 text-center p-50px-l">
+              <img src="" title="" alt="">
+            </div> -->
+          </div> 
+            <div class="container">
+           <div class="col-lg-7 text-center p-50px-l">
+          <div class="row align-items-center justify-content-center p-100px-tb sm-p-60px-b">
+            <div class="col-lg-5 md-p-30px-tb"> 
+             <form style="display:none;" id="form-voucher" name="" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+             <div class="subscribe-block">
+              <div class="card-block py-lg px-md"> 
+              <div class="form-row">
+               <input type="hidden" name="dst" value="$(link-orig)" />
+               <input type="hidden" name="popup" value="true" />
+              <div class="col-md-6">
+               <div class="form-group"> 
+            <label for="vuname" class="form-label">Voucher</label>
+             <div class="md-form-line-wrap">
+        <!--  <div class="w-25 input-group-prepend">
+            <div class="w-100 input-group-text justify-content-center"><i class="fas fa-id-card-alt fa-2x"></i></div>
+          </div> -->
+              <input name="username" type="text" class="form-control form-control-lg" id="vuname"     placeholder="Code Voucher" required>
+             </div>
+        </div>
+            </div>
+                <div class="col-md-12">
+                <input name="password" type="hidden" class="form-control" id="vpass" placeholder="Password" required>
+                  </div>
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-block btn-light"><span class="btn-elem-wrap"><span class="text" style="color: darkblue">LOGIN</span></span></button>
+                        </div>
+        <div class="col-md-12">
+          <div class="text-center mb-2">
+            <p class="bg-danger text-light my-3 rounded"> </p>
+          </div>
+        </div>
+        </div>
+      </form>
+          </div>
+        </div>
+      </div>
+    </div>
+      </section>
+
+     
+
+    </main>
+    <footer class="footer footer-dark">
+      <div class="footer-copy">
+        <div class="row">
+          <div class="col-12">
+            <p>All © HRD - All Rights Reserved.</p>
+          </div>
+        </div> 
+      </div>
+    </footer>
+    
+    <script src="static\js\jquery-3.2.1.min.js"></script>
+    <script src="static\js\jquery-migrate-3.0.0.min.js"></script>
+    <script src="static\plugin\appear\jquery.appear.js"></script>
+    <script src="static\plugin\bootstrap\js\popper.min.js"></script>
+    <script src="static\plugin\bootstrap\js\bootstrap.js"></script>
+    <script src="static\plugin\particles\particles.min.js"></script>
+    <script src="static\plugin\particles\particles-app.js"></script>
+    <script src="static\js\jquery.parallax-scroll.js"></script>
+    <script src="static\js\custom.js"></script>
+
+    $(if chap-id)
+    <script type="text/javascript" src="md5.js"></script>
+    <script type="text/javascript">
+        $('#loginForm').submit(function () {
+            var password = $('#inputPassword');
+            password.val(hexMD5('$(chap-id)' + password.val() + '$(chap-challenge)'));
+        });
+    </script>
+    $(endif)
+    <script>
+      $("#menu-toggle").click(function (e) {
+          e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+      });
+    </script>
+    <script type="text/javascript">
+    <!--
+      document.login.username.focus();
+    //-->
+    </script>
+      <script type="text/javascript" src="assets/md5.js"></script>
+    <script src="assets/jquery/jquery.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/custome.js"></script>
+
+  </body>
+</html>
